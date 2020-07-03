@@ -1649,6 +1649,10 @@ a.readmore{
   font-size: 30px;;
 }
 
+.font-8-rem{
+  font-size: 8rem !important;
+}
+
 /**************** Achievment Start************/
 .achieve-container .achieve{
   text-align: center;
@@ -2410,8 +2414,4 @@ blockquote{
 }
 .mce_inline_error{
   color: red;
-}
-
-.flipthis-highlight{
-  outline: none !important;
 }
