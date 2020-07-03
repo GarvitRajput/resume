@@ -57,7 +57,7 @@ body{
   font-size: 14px;
   font-weight: normal; 
   line-height: 1.45;
-  background: url('../images/bg/bg4.png') repeat;
+  background: url('../images/bg4.png') repeat;
   color:#334;
   letter-spacing: 0.5px;
   overflow: hidden;
@@ -446,6 +446,7 @@ ul.bottom-logo{
     width: 200px;
     max-width: 100%;
     height: auto;
+    filter:grayscale(1);
     margin-top: 30px;
     border-width: 1px;
     border-style: solid;
@@ -1612,7 +1613,7 @@ a.readmore{
 /**************** CounterUp Start************/
 .fact-container .fact{
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 15px;
   border-width: 1px;
     border-style: solid;
@@ -1642,6 +1643,10 @@ a.readmore{
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 10px;
+}
+
+.fact i{
+  font-size: 30px;;
 }
 
 /**************** Achievment Start************/
@@ -2405,4 +2410,8 @@ blockquote{
 }
 .mce_inline_error{
   color: red;
+}
+
+.flipthis-highlight{
+  outline: none !important;
 }
