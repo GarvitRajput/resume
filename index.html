@@ -11,7 +11,7 @@
     <meta name="author" content="" />
     <link rel="shortcut icon" href="images/favicon.png" />
     <title>Garvit Rajput Resume</title>
-
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <!-- Flexslider -->
@@ -138,7 +138,7 @@
         <p><a href="#contact">Contact.</a></p>
       </div>
     </div>
-    
+
     <div class="bottom-nav">
       <div class="copy-text">
         <p>Copyright &copy; 2020. All Right Reserve.</p>
@@ -207,7 +207,7 @@
                 <div class="downloaddiv">
                   <ul class="my-download">
                     <li>
-                      <a href="images/resume.pdf" download
+                      <a href="/data/resume.pdf" download
                         >Download <i class="fa fa-download"></i
                       ></a>
                     </li>
@@ -415,9 +415,11 @@
                     </div>
                     <div class="exp-rt-content col-md-8">
                       <p>
-                        Worked on enhancing the performance and scaling the existing services.
-                        Worked on improving frontend project codebase
-                        <br><b>Tech Stack :</b> Angular, NodeJs, Azure Insights
+                        Worked on enhancing the performance and scaling the
+                        existing services. Worked on improving frontend project
+                        codebase
+                        <br /><b>Tech Stack :</b> Angular, NodeJs, Azure
+                        Insights
                       </p>
                     </div>
                   </div>
@@ -446,8 +448,9 @@
                     </div>
                     <div class="exp-rt-content col-md-8">
                       <p>
-                        Enhanced product definition and application customization.
-                        Designed and developed new product elements<br>
+                        Enhanced product definition and application
+                        customization. Designed and developed new product
+                        elements<br />
                         <b>Tech Stack :</b> Angular, .Net MVC, Web RTC
                       </p>
                     </div>
@@ -478,8 +481,8 @@
                     <div class="exp-rt-content col-md-8">
                       <p>
                         Done internship from Intellirise Tech solutions
-                        <b>Project Name: </b> Codesroom
-                        <br><b>Skillset :</b> ASP .Net MVC, AngularJs, jQuery, JavaScript
+                        <b>Project Name: </b> Codesroom <br /><b>Skillset :</b>
+                        ASP .Net MVC, AngularJs, jQuery, JavaScript
                       </p>
                     </div>
                   </div>
@@ -748,8 +751,8 @@
         </div>
       </section>
 
-       <!-- ======== Contact Section ======== -->
-       <section class="section" id="contact">
+      <!-- ======== Contact Section ======== -->
+      <section class="section" id="contact">
         <div class="container">
           <div class="add-form text-center">
             <h3 class="title line"><span>Contact Me</span></h3>
@@ -758,31 +761,81 @@
               <div class="col-md-6 col-sm-6 gmap fadeIn">
                 <div class="contact-left">
                   <h3><strong>Address:</strong></h3>
-                  <p>Newtown, Lakeshohor, Country</p>
+                  <p>
+                    R-806, Amrapali Silicon City,<br />
+                    Sector 76,Noida, UP, India, 201306
+                  </p>
 
                   <h3><strong>Phone:</strong></h3>
-                  <p>+88 002 541 282</p>
-
-                  <h3><strong>Working Period:</strong></h3>
-                  <p>Day: Monday - Saturday</p>
-                  <p>Time: 09:00AM - 05:00PM</p>
+                  <p>+91 7836084766</p>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 con-form fadeIn">
-                <form id="contactform" method="post" action="index.html" class="c_form">
-                  <input type="text" id="inputName" class="c_input" placeholder="Name"/>
-                  <input type="text"  id="inputMail" class="c_input" placeholder="Email"/>
-                  <input type="text"  id="inputSubject" class="c_input" placeholder="Subject"/>
-                  <textarea id="inputMessage" class="c_textarea" placeholder="Message"></textarea>
-                  <button type="submit" id="submit-btn" class="c_button">Submit <i class="fa fa-send-o"></i></button>
-                </form>
+                <div
+                  class="c_form"
+                >
+                  <input
+                    type="text"
+                    id="inputName"
+                    class="c_input"
+                    placeholder="Name"
+                  />
+                  <input
+                    type="text"
+                    id="inputMail"
+                    class="c_input"
+                    placeholder="Email"
+                  />
+                  <input
+                    type="text"
+                    id="inputSubject"
+                    class="c_input"
+                    placeholder="Subject"
+                  />
+                  <textarea
+                    id="inputMessage"
+                    class="c_textarea"
+                    placeholder="Message"
+                  ></textarea>
+                  <button onclick="submitForm()" id="submit-btn" class="c_button">
+                    Submit <i class="fa fa-send-o"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div id="google-map"></div>
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe
+                width="100%"
+                height="400"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=amrapali%20silicon%20city%20noida%20sector%2076&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe
+              ><a href="https://www.whatismyip-address.com/elementor/"
+                >elementor discount</a
+              >
+            </div>
+            <style>
+              .mapouter {
+                height: 400px;
+                width: 100%;
+              }
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 400px;
+                width: 100%;
+              }
+            </style>
+          </div>
         </div>
       </section>
-        </div>
+    </div>
 
     <!--================================================== -->
     <!-- JS files placed at the end of the document for the pages load faster -->
@@ -807,6 +860,6 @@
     <script src="js/swiper.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/swiper-custom.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvpnlHRidMIU374bKM5-sx8ruc01OvDjI"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP2NOsLnfU2EC30s34E78Igr8KQ5-i8s8"></script>
   </body>
 </html>
