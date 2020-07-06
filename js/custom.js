@@ -322,6 +322,28 @@ function resetForm() {
   $("#inputMessage").val("");
 }
 
+function showError(err) {
+  iziToast.error({
+    title: "Error",
+    position: "topRight",
+    displayMode: 2,
+    message: err,
+  });
+}
+
+function showSuccess(name) {
+  iziToast.show({
+    id: "show",
+    icon: "icon-drafts",
+    class: "custom1",
+    color: "#334",
+    messageColor: "white",
+    displayMode: 2,
+    message: `Thanks ${name}! I have received your request and will get back to you shortly.`,
+    position: "center",
+  });
+}
+
 function submitForm() {
   let nameRegx = /^[a-zA-Z ]{2,30}$/;
   let emailRegx = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -330,16 +352,16 @@ function submitForm() {
   let subject = $("#inputSubject").val();
   let message = $("#inputMessage").val();
   if (!nameRegx.test(name)) {
-    alert("enter valid name");
+    showError("Enter valid name");
     return;
   } else if (!emailRegx.test(email)) {
-    alert("enter valid email");
+    showError("Enter valid email");
     return;
   } else if (subject.trim().length == 0) {
-    alert("enter valid subject");
+    showError("Enter valid subject");
     return;
   } else if (message.trim().length == 0) {
-    alert("enter valid message");
+    showError("Enter valid message");
     return;
   }
   let data = {
@@ -348,7 +370,6 @@ function submitForm() {
     subject: subject,
     message: message,
   };
-  console.log(data);
 
   $.ajax({
     url: "https://contact-form-api.herokuapp.com/v1/contact",
@@ -357,11 +378,11 @@ function submitForm() {
     crossDomain: true,
     data: data,
     success: function (data) {
-      alert("Request submitted successfully");
+      showSuccess(name);
       resetForm();
     },
     failure: function (data) {
-      alert("Something went wrong");
+      showError("Something went wrong");
     },
   });
 }
