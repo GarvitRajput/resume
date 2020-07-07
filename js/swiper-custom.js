@@ -1,12 +1,1 @@
-
-(function($){
-    "use strict"; // Start of use strict
-    var swiper = new Swiper('.bg-slider', {
-      centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-    });
-
-})(jQuery); // End of use strict
+!function(e){"use strict";new Swiper(".bg-slider",{centeredSlides:!0,autoplay:{delay:5e3,disableOnInteraction:!1}})}(jQuery);
